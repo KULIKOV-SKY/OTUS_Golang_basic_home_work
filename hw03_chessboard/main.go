@@ -1,5 +1,33 @@
 package main
 
+import "fmt"
+
 func main() {
-	// Place your code here.
+	var length int = 8
+	var width int = 10
+	var i int
+	var LastSymb string = " "
+	var NumString int = 1
+	var OutputLine string
+
+	for i = 1; i <= width*length; i++ {
+		switch LastSymb {
+		case " ":
+			OutputLine = OutputLine + "#"
+			LastSymb = "#"
+		case "#":
+			OutputLine = OutputLine + " "
+			LastSymb = " "
+		}
+		if i%length == 0 {
+			OutputLine = OutputLine + "\n"
+			NumString++
+			if length%2 == 0 && NumString%2 == 0 {
+				LastSymb = "#"
+			} else if length%2 == 0 && NumString%2 != 0 {
+				LastSymb = " "
+			}
+		}
+	}
+	fmt.Println(OutputLine)
 }
