@@ -3,12 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	var length int = 8
-	var width int = 10
+	var length int
+	var width int
 	var i int
 	var LastSymb string = " "
 	var NumString int = 1
 	var OutputLine string
+
+	fmt.Printf("Enter length: ")
+	fmt.Scanln(&length)
+	fmt.Printf("Enter width: ")
+	fmt.Scanln(&width)
 
 	for i = 1; i <= width*length; i++ {
 		switch LastSymb {
