@@ -12,7 +12,7 @@ func main() {
 	var path string = "data.json"
 
 	fmt.Printf("Enter data file path: ")
-	//fmt.Scanln(&path)
+	fmt.Scanln(&path)
 
 	var err error
 	var staff []types.Employee
